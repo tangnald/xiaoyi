@@ -47,7 +47,7 @@ def get_come_day():
   comeday = datetime.strptime(20221125, "%Y-%m-%d")
   if comeday > datetime.now():
     return "妹妹回来啦!"
-  else：
+  else:
     return (comeday-today).days
 
 
