@@ -45,7 +45,7 @@ def get_random_color():
 
 def get_come_day():
   comeday = datetime.strptime("2022-11-25", "%Y-%m-%d")
-  if comeday > datetime.now():
+  if comeday <= datetime.now():
     return "妹妹回来啦!"
   else:
     return (comeday-today).days
