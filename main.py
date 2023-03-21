@@ -45,11 +45,13 @@ def get_random_color():
 
 def get_come_day():
   comeday = datetime.strptime("2022-11-25", "%Y-%m-%d")
-  if comeday <= datetime.now():
-    return "妹妹回来啦!"
-  else:
-    return (comeday-today).days
-
+  currentdate = datetime.date.today()
+  year= currentdate.year
+  month = currentdate.month
+  day = currentdate.day
+  currentday =calendar.weekday(year,month,day)
+  if currentday > 5:
+    return "周末啦！"
 
 client = WeChatClient(app_id, app_secret)
 
